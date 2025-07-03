@@ -1,0 +1,2446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional roofing and remodeling services. Expert contractors providing quality roofing repairs, installations, and home remodeling solutions.">
+    <meta name="keywords" content="roofing, remodeling, construction, roof repair, contractors, home improvement">
+    <title>Elite Roofing & Remodeling - Professional Construction Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    /* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Color Palette - Professional Construction Theme */
+    --primary-color: #1a365d;        /* Deep blue */
+    --secondary-color: #2c5f87;      /* Medium blue */
+    --accent-color: #e53e3e;         /* Safety red */
+    --success-color: #38a169;        /* Green */
+    --warning-color: #d69e2e;        /* Golden yellow */
+    
+    /* Neutral Colors */
+    --dark-color: #2d3748;           /* Dark gray */
+    --gray-700: #4a5568;
+    --gray-600: #718096;
+    --gray-500: #a0aec0;
+    --gray-400: #cbd5e0;
+    --gray-300: #e2e8f0;
+    --gray-200: #edf2f7;
+    --gray-100: #f7fafc;
+    --white: #ffffff;
+    
+    /* Typography */
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Roboto', sans-serif;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-xxl: 4rem;
+    
+    /* Border Radius */
+    --radius-sm: 0.375rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.16), 0 2px 4px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.04);
+    
+    /* Transitions */
+    --transition-fast: 0.15s ease-in-out;
+    --transition-normal: 0.3s ease-in-out;
+    --transition-slow: 0.5s ease-in-out;
+    
+    /* Header height */
+    --header-height: 5rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--dark-color);
+    background-color: var(--white);
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
+}
+
+/* Sections */
+.section {
+    padding: var(--spacing-xxl) 0;
+}
+
+.section__header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.section__title {
+    font-family: var(--font-primary);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+    position: relative;
+}
+
+.section__title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+    border-radius: 2px;
+}
+
+.section__subtitle {
+    font-size: 1.125rem;
+    color: var(--gray-600);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: 0.75rem 1.5rem;
+    font-family: var(--font-primary);
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn--primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    box-shadow: var(--shadow-md);
+}
+
+.btn--primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn--secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn--secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-sm);
+    z-index: 1000;
+    transition: all var(--transition-normal);
+}
+
+.nav {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo h2 {
+    font-family: var(--font-primary);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.nav__logo span {
+    font-size: 0.875rem;
+    color: var(--gray-600);
+    font-weight: 400;
+}
+
+.nav__menu {
+    position: fixed;
+    top: var(--header-height);
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - var(--header-height));
+    background-color: var(--white);
+    padding: var(--spacing-lg);
+    transition: left var(--transition-normal);
+}
+
+.nav__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.nav__link {
+    font-family: var(--font-primary);
+    font-weight: 500;
+    color: var(--dark-color);
+    text-decoration: none;
+    font-size: 1.125rem;
+    transition: color var(--transition-fast);
+}
+
+.nav__link:hover,
+.nav__link.active-link {
+    color: var(--primary-color);
+}
+
+.nav__contact {
+    display: none;
+}
+
+.nav__phone {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    font-family: var(--font-primary);
+    font-weight: 600;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.nav__toggle {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.nav__close {
+    position: absolute;
+    top: var(--spacing-sm);
+    right: var(--spacing-sm);
+    font-size: 1.5rem;
+    color: var(--dark-color);
+    cursor: pointer;
+}
+
+/* Show menu */
+.show-menu {
+    left: 0;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, var(--gray-100) 0%, var(--white) 100%);
+    padding-top: var(--header-height);
+}
+
+.hero__container {
+    display: grid;
+    gap: var(--spacing-xl);
+}
+
+.hero__content {
+    text-align: center;
+}
+
+.hero__title {
+    font-family: var(--font-primary);
+    font-size: 2.75rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.2;
+}
+
+.hero__title span {
+    color: var(--accent-color);
+}
+
+.hero__description {
+    font-size: 1.125rem;
+    color: var(--gray-600);
+    margin-bottom: var(--spacing-xl);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.hero__features {
+    display: grid;
+    gap: var(--spacing-md);
+}
+
+.hero__feature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xs);
+    font-weight: 500;
+    color: var(--gray-700);
+}
+
+.hero__feature i {
+    color: var(--success-color);
+    font-size: 1.25rem;
+}
+
+.hero__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: var(--radius-xl);
+    min-height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-xl);
+}
+
+/* Services Section */
+.services {
+    background-color: var(--gray-100);
+}
+
+.services__container {
+    display: grid;
+    gap: var(--spacing-lg);
+}
+
+.service__card {
+    background-color: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    transition: transform var(--transition-normal);
+}
+
+.service__card:hover {
+    transform: translateY(-5px);
+}
+
+.service__icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-md);
+}
+
+.service__icon i {
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.service__title {
+    font-family: var(--font-primary);
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.service__description {
+    color: var(--gray-600);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.6;
+}
+
+.service__features {
+    list-style: none;
+    text-align: left;
+}
+
+.service__features li {
+    padding: 0.25rem 0;
+    color: var(--gray-700);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.service__features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--success-color);
+    font-weight: bold;
+}
+
+/* About Section */
+.about__container {
+    display: grid;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.about__description {
+    font-size: 1.125rem;
+    color: var(--gray-600);
+    margin-bottom: var(--spacing-xl);
+    line-height: 1.7;
+}
+
+.about__stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.stat {
+    text-align: center;
+    padding: var(--spacing-md);
+    background-color: var(--gray-100);
+    border-radius: var(--radius-lg);
+}
+
+.stat__number {
+    font-family: var(--font-primary);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-xs);
+}
+
+.stat__text {
+    color: var(--gray-600);
+    font-weight: 500;
+}
+
+.about__certifications h4 {
+    font-family: var(--font-primary);
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+    font-size: 1.25rem;
+}
+
+.certifications__list {
+    list-style: none;
+}
+
+.certifications__list li {
+    padding: 0.5rem 0;
+    color: var(--gray-700);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.certifications__list i {
+    color: var(--success-color);
+}
+
+.about__image {
+    position: relative;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: var(--radius-xl);
+    min-height: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-xl);
+}
+
+.about__experience {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+.experience__years {
+    display: block;
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.experience__text {
+    font-size: 0.875rem;
+    color: var(--gray-600);
+    font-weight: 500;
+}
+
+/* Portfolio Section */
+.portfolio {
+    background-color: var(--gray-100);
+}
+
+.portfolio__filters {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-xl);
+    flex-wrap: wrap;
+}
+
+.filter__btn {
+    padding: 0.5rem 1rem;
+    background-color: var(--white);
+    color: var(--gray-600);
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    font-weight: 500;
+}
+
+.filter__btn:hover,
+.filter__btn.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.portfolio__container {
+    display: grid;
+    gap: var(--spacing-lg);
+}
+
+.portfolio__item {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    min-height: 250px;
+    cursor: pointer;
+    transition: transform var(--transition-normal);
+}
+
+.portfolio__item:hover {
+    transform: scale(1.05);
+}
+
+.portfolio__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+}
+
+.portfolio__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(26, 54, 93, 0.8), rgba(44, 95, 135, 0.8));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+.portfolio__item:hover .portfolio__overlay {
+    opacity: 1;
+}
+
+.portfolio__title {
+    font-family: var(--font-primary);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: var(--spacing-xs);
+    text-align: center;
+}
+
+.portfolio__category {
+    color: var(--gray-300);
+    margin-bottom: var(--spacing-md);
+}
+
+.portfolio__btn {
+    width: 50px;
+    height: 50px;
+    background-color: var(--white);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    transition: transform var(--transition-fast);
+}
+
+.portfolio__btn:hover {
+    transform: scale(1.1);
+}
+
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox__content {
+    position: relative;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.lightbox__close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+.lightbox__close:hover {
+    color: var(--accent-color);
+}
+
+.lightbox__image {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);
+}
+
+/* Testimonials Section */
+.testimonials__container {
+    display: grid;
+    gap: var(--spacing-lg);
+}
+
+.testimonial__card {
+    background-color: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    text-align: center;
+}
+
+.testimonial__stars {
+    margin-bottom: var(--spacing-md);
+}
+
+.testimonial__stars i {
+    color: var(--warning-color);
+    font-size: 1.25rem;
+    margin-right: 0.25rem;
+}
+
+.testimonial__text {
+    font-size: 1.125rem;
+    color: var(--gray-600);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-lg);
+    font-style: italic;
+}
+
+.testimonial__author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-md);
+}
+
+.testimonial__avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+.author__name {
+    font-family: var(--font-primary);
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.author__location {
+    color: var(--gray-600);
+    font-size: 0.875rem;
+}
+
+/* Contact Section */
+.contact {
+    background-color: var(--gray-100);
+}
+
+.contact__container {
+    display: grid;
+    gap: var(--spacing-xl);
+}
+
+.contact__title {
+    font-family: var(--font-primary);
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+}
+
+.contact__description {
+    color: var(--gray-600);
+    margin-bottom: var(--spacing-xl);
+    line-height: 1.6;
+}
+
+.contact__details {
+    margin-bottom: var(--spacing-xl);
+}
+
+.contact__item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.contact__item i {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.25rem;
+}
+
+.contact__item h4 {
+    font-family: var(--font-primary);
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.contact__item a {
+    color: var(--gray-600);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.contact__item a:hover {
+    color: var(--primary-color);
+}
+
+.service__areas h4 {
+    font-family: var(--font-primary);
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.service__areas p {
+    color: var(--gray-600);
+    line-height: 1.6;
+}
+
+/* Contact Form */
+.contact__form {
+    background-color: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+}
+
+.form__title {
+    font-family: var(--font-primary);
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+}
+
+.form__group {
+    margin-bottom: var(--spacing-md);
+}
+
+.form__input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid var(--gray-300);
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    transition: border-color var(--transition-fast);
+    font-family: var(--font-secondary);
+}
+
+.form__input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.form__textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form__error {
+    color: var(--accent-color);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+.form__btn {
+    width: 100%;
+    padding: 1rem;
+    margin-top: var(--spacing-md);
+    position: relative;
+}
+
+.btn__loading {
+    display: none;
+}
+
+.form__success {
+    background-color: var(--success-color);
+    color: var(--white);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    margin-top: var(--spacing-md);
+    text-align: center;
+}
+
+.form__success i {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-xs);
+    display: block;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: var(--spacing-xxl) 0 var(--spacing-lg);
+}
+
+.footer__container {
+    margin-bottom: var(--spacing-xl);
+}
+
+.footer__content {
+    display: grid;
+    gap: var(--spacing-xl);
+}
+
+.footer__logo h3 {
+    font-family: var(--font-primary);
+    margin-bottom: var(--spacing-md);
+    color: var(--white);
+}
+
+.footer__logo p {
+    color: var(--gray-300);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+}
+
+.footer__social {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.social__link {
+    width: 40px;
+    height: 40px;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: background-color var(--transition-fast);
+}
+
+.social__link:hover {
+    background-color: var(--accent-color);
+}
+
+.footer__title {
+    font-family: var(--font-primary);
+    margin-bottom: var(--spacing-md);
+    color: var(--white);
+}
+
+.footer__links {
+    list-style: none;
+}
+
+.footer__links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer__links a {
+    color: var(--gray-300);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer__links a:hover {
+    color: var(--white);
+}
+
+.footer__contact p {
+    color: var(--gray-300);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.footer__contact i {
+    color: var(--accent-color);
+}
+
+.footer__hours {
+    margin-top: var(--spacing-md);
+}
+
+.footer__hours h5 {
+    color: var(--white);
+    margin-bottom: var(--spacing-sm);
+}
+
+.footer__hours p {
+    color: var(--gray-300);
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+}
+
+.footer__bottom {
+    border-top: 1px solid var(--secondary-color);
+    padding-top: var(--spacing-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+.footer__copyright p {
+    color: var(--gray-300);
+    margin: 0;
+}
+
+.footer__legal {
+    display: flex;
+    gap: var(--spacing-lg);
+}
+
+.footer__legal a {
+    color: var(--gray-300);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color var(--transition-fast);
+}
+
+.footer__legal a:hover {
+    color: var(--white);
+}
+
+/* Responsive Design */
+@media screen and (min-width: 576px) {
+    .hero__buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .hero__features {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .section__title {
+        font-size: 3rem;
+    }
+    
+    .hero__title {
+        font-size: 3.5rem;
+    }
+    
+    .hero__container {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+    
+    .hero__content {
+        text-align: left;
+    }
+    
+    .hero__buttons {
+        justify-content: flex-start;
+    }
+    
+    .services__container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    
+    .about__container {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .portfolio__container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    
+    .testimonials__container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    
+    .contact__container {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .footer__content {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .nav__menu {
+        position: static;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        padding: 0;
+        flex-direction: row;
+    }
+    
+    .nav__list {
+        flex-direction: row;
+        gap: var(--spacing-lg);
+    }
+    
+    .nav__link {
+        font-size: 1rem;
+    }
+    
+    .nav__contact {
+        display: block;
+    }
+    
+    .nav__toggle,
+    .nav__close {
+        display: none;
+    }
+    
+    .services__container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .portfolio__container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .testimonials__container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Hidden classes */
+.hidden {
+    display: none !important;
+}
+
+/* Animation classes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Loading states */
+.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.loading .btn__text {
+    display: none;
+}
+
+.loading .btn__loading {
+    display: inline;
+}
+
+/* Form validation states */
+.form__input.error {
+    border-color: var(--accent-color);
+}
+
+.form__input.success {
+    border-color: var(--success-color);
+}
+
+/* Utility classes */
+.text-center {
+    text-align: center;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.mt-auto {
+    margin-top: auto;
+}
+
+/* Print styles */
+@media print {
+    .header,
+    .footer,
+    .nav__toggle,
+    .nav__close,
+    .btn,
+    .lightbox {
+        display: none !important;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+    
+    .section {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+}
+</style>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <h2>Elite Roofing</h2>
+                <span>& Remodeling</span>
+            </div>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
+                    <li class="nav__item"><a href="#testimonials" class="nav__link">Reviews</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+                
+                <div class="nav__close" id="nav-close">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            
+            <div class="nav__contact">
+                <a href="tel:+15551234567" class="nav__phone">
+                    <i class="fas fa-phone"></i>
+                    (555) 123-4567
+                </a>
+            </div>
+            
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero section" id="home">
+            <div class="hero__container container">
+                <div class="hero__content">
+                    <h1 class="hero__title">
+                        Professional Roofing & <span>Remodeling Services</span>
+                    </h1>
+                    <p class="hero__description">
+                        Trust the experts for all your roofing and remodeling needs. Over 20 years of experience 
+                        delivering quality craftsmanship and exceptional customer service.
+                    </p>
+                    <div class="hero__buttons">
+                        <a href="#contact" class="btn btn--primary">Get Free Quote</a>
+                        <a href="tel:+15551234567" class="btn btn--secondary">
+                            <i class="fas fa-phone"></i>
+                            Emergency Service
+                        </a>
+                    </div>
+                    <div class="hero__features">
+                        <div class="hero__feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Licensed & Insured</span>
+                        </div>
+                        <div class="hero__feature">
+                            <i class="fas fa-clock"></i>
+                            <span>24/7 Emergency Service</span>
+                        </div>
+                        <div class="hero__feature">
+                            <i class="fas fa-star"></i>
+                            <span>5-Star Rated</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero__image">
+                    <img src="images/hero-roofing.jpg" alt="Professional roofing team at work" class="hero__img">
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services section" id="services">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Our Services</h2>
+                    <p class="section__subtitle">Comprehensive roofing and remodeling solutions for your home</p>
+                </div>
+                
+                <div class="services__container">
+                    <div class="service__card">
+                        <div class="service__icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3 class="service__title">Roof Installation</h3>
+                        <p class="service__description">
+                            Complete roof installations using premium materials and expert craftsmanship. 
+                            We work with all roofing types including asphalt, metal, tile, and slate.
+                        </p>
+                        <ul class="service__features">
+                            <li>Premium materials</li>
+                            <li>Expert installation</li>
+                            <li>Warranty included</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service__card">
+                        <div class="service__icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3 class="service__title">Roof Repair</h3>
+                        <p class="service__description">
+                            Fast and reliable roof repair services for leaks, storm damage, and wear. 
+                            Our emergency repair team is available 24/7 for urgent situations.
+                        </p>
+                        <ul class="service__features">
+                            <li>Emergency repairs</li>
+                            <li>Storm damage restoration</li>
+                            <li>Leak detection & repair</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service__card">
+                        <div class="service__icon">
+                            <i class="fas fa-hammer"></i>
+                        </div>
+                        <h3 class="service__title">Home Remodeling</h3>
+                        <p class="service__description">
+                            Transform your living space with our comprehensive remodeling services. 
+                            From kitchens to bathrooms, we bring your vision to life.
+                        </p>
+                        <ul class="service__features">
+                            <li>Kitchen remodeling</li>
+                            <li>Bathroom renovation</li>
+                            <li>Room additions</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service__card">
+                        <div class="service__icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3 class="service__title">Roof Inspection</h3>
+                        <p class="service__description">
+                            Thorough roof inspections to identify potential issues before they become 
+                            costly problems. Detailed reports with recommendations included.
+                        </p>
+                        <ul class="service__features">
+                            <li>Comprehensive inspection</li>
+                            <li>Detailed reports</li>
+                            <li>Prevention focused</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service__card">
+                        <div class="service__icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3 class="service__title">Emergency Services</h3>
+                        <p class="service__description">
+                            24/7 emergency roofing services for storm damage, leaks, and urgent repairs. 
+                            Our rapid response team protects your property when you need it most.
+                        </p>
+                        <ul class="service__features">
+                            <li>24/7 availability</li>
+                            <li>Rapid response</li>
+                            <li>Emergency tarping</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service__card">
+                        <div class="service__icon">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <h3 class="service__title">Gutter Services</h3>
+                        <p class="service__description">
+                            Complete gutter installation, repair, and maintenance services. 
+                            Protect your home's foundation with properly functioning gutters.
+                        </p>
+                        <ul class="service__features">
+                            <li>Gutter installation</li>
+                            <li>Cleaning & maintenance</li>
+                            <li>Gutter guards</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about section" id="about">
+            <div class="container">
+                <div class="about__container">
+                    <div class="about__content">
+                        <div class="section__header">
+                            <h2 class="section__title">About Elite Roofing & Remodeling</h2>
+                            <p class="section__subtitle">Building trust through quality craftsmanship since 2003</p>
+                        </div>
+                        
+                        <p class="about__description">
+                            With over 20 years of experience in the roofing and remodeling industry, 
+                            Elite Roofing & Remodeling has established itself as the trusted choice for 
+                            homeowners throughout the region. Our commitment to excellence, combined with 
+                            our skilled craftsmen and premium materials, ensures every project exceeds expectations.
+                        </p>
+                        
+                        <div class="about__stats">
+                            <div class="stat">
+                                <h3 class="stat__number">2500+</h3>
+                                <p class="stat__text">Projects Completed</p>
+                            </div>
+                            <div class="stat">
+                                <h3 class="stat__number">20+</h3>
+                                <p class="stat__text">Years Experience</p>
+                            </div>
+                            <div class="stat">
+                                <h3 class="stat__number">100%</h3>
+                                <p class="stat__text">Satisfaction Rate</p>
+                            </div>
+                        </div>
+                        
+                        <div class="about__certifications">
+                            <h4>Our Certifications & Credentials</h4>
+                            <ul class="certifications__list">
+                                <li><i class="fas fa-check"></i> Licensed & Bonded Contractor</li>
+                                <li><i class="fas fa-check"></i> GAF Master Elite Certified</li>
+                                <li><i class="fas fa-check"></i> Better Business Bureau A+ Rating</li>
+                                <li><i class="fas fa-check"></i> Fully Insured & Workers Compensation</li>
+                                <li><i class="fas fa-check"></i> OSHA Safety Certified</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="about__image">
+                        <img src="images/about-team.jpg" alt="Professional roofing team" class="about__img">
+                        <div class="about__experience">
+                            <span class="experience__years">20+</span>
+                            <span class="experience__text">Years of Excellence</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section class="portfolio section" id="portfolio">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Our Work Portfolio</h2>
+                    <p class="section__subtitle">Showcasing our finest roofing and remodeling projects</p>
+                </div>
+                
+                <div class="portfolio__filters">
+                    <button class="filter__btn active" data-filter="all">All Projects</button>
+                    <button class="filter__btn" data-filter="roofing">Roofing</button>
+                    <button class="filter__btn" data-filter="remodeling">Remodeling</button>
+                    <button class="filter__btn" data-filter="repairs">Repairs</button>
+                </div>
+                
+                <div class="portfolio__container">
+                    <div class="portfolio__item" data-category="roofing">
+                        <img src="images/project-1.jpg" alt="Residential roof installation" class="portfolio__img">
+                        <div class="portfolio__overlay">
+                            <h4 class="portfolio__title">Modern Roof Installation</h4>
+                            <p class="portfolio__category">Roofing</p>
+                            <button class="portfolio__btn" onclick="openLightbox('images/project-1.jpg')">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio__item" data-category="remodeling">
+                        <img src="images/project-2.jpg" alt="Kitchen remodeling project" class="portfolio__img">
+                        <div class="portfolio__overlay">
+                            <h4 class="portfolio__title">Kitchen Renovation</h4>
+                            <p class="portfolio__category">Remodeling</p>
+                            <button class="portfolio__btn" onclick="openLightbox('images/project-2.jpg')">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio__item" data-category="roofing">
+                        <img src="images/project-3.jpg" alt="Commercial roofing project" class="portfolio__img">
+                        <div class="portfolio__overlay">
+                            <h4 class="portfolio__title">Commercial Roofing</h4>
+                            <p class="portfolio__category">Roofing</p>
+                            <button class="portfolio__btn" onclick="openLightbox('images/project-3.jpg')">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio__item" data-category="repairs">
+                        <img src="images/project-4.jpg" alt="Storm damage repair" class="portfolio__img">
+                        <div class="portfolio__overlay">
+                            <h4 class="portfolio__title">Storm Damage Repair</h4>
+                            <p class="portfolio__category">Repairs</p>
+                            <button class="portfolio__btn" onclick="openLightbox('images/project-4.jpg')">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio__item" data-category="remodeling">
+                        <img src="images/project-5.jpg" alt="Bathroom renovation" class="portfolio__img">
+                        <div class="portfolio__overlay">
+                            <h4 class="portfolio__title">Luxury Bathroom</h4>
+                            <p class="portfolio__category">Remodeling</p>
+                            <button class="portfolio__btn" onclick="openLightbox('images/project-5.jpg')">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio__item" data-category="roofing">
+                        <img src="images/project-6.jpg" alt="Metal roofing installation" class="portfolio__img">
+                        <div class="portfolio__overlay">
+                            <h4 class="portfolio__title">Metal Roof System</h4>
+                            <p class="portfolio__category">Roofing</p>
+                            <button class="portfolio__btn" onclick="openLightbox('images/project-6.jpg')">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials section" id="testimonials">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">What Our Customers Say</h2>
+                    <p class="section__subtitle">Real reviews from satisfied homeowners</p>
+                </div>
+                
+                <div class="testimonials__container">
+                    <div class="testimonial__card">
+                        <div class="testimonial__stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial__text">
+                            "Elite Roofing did an outstanding job on our roof replacement. The team was professional, 
+                            clean, and completed the work ahead of schedule. Couldn't be happier with the results!"
+                        </p>
+                        <div class="testimonial__author">
+                            <img src="images/client-1.jpg" alt="Sarah Johnson" class="testimonial__avatar">
+                            <div class="author__info">
+                                <h4 class="author__name">Sarah Johnson</h4>
+                                <p class="author__location">Springfield, IL</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial__card">
+                        <div class="testimonial__stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial__text">
+                            "Fast response for our emergency roof leak during the storm. The crew worked through 
+                            the night to protect our home. Excellent service and fair pricing."
+                        </p>
+                        <div class="testimonial__author">
+                            <img src="images/client-2.jpg" alt="Mike Rodriguez" class="testimonial__avatar">
+                            <div class="author__info">
+                                <h4 class="author__name">Mike Rodriguez</h4>
+                                <p class="author__location">Oak Park, IL</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial__card">
+                        <div class="testimonial__stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial__text">
+                            "Our kitchen remodel exceeded all expectations. The attention to detail and quality 
+                            of work was exceptional. Highly recommend Elite Roofing & Remodeling!"
+                        </p>
+                        <div class="testimonial__author">
+                            <img src="images/client-3.jpg" alt="Jennifer Chen" class="testimonial__avatar">
+                            <div class="author__info">
+                                <h4 class="author__name">Jennifer Chen</h4>
+                                <p class="author__location">Naperville, IL</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact section" id="contact">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Get Your Free Quote Today</h2>
+                    <p class="section__subtitle">Ready to start your project? Contact us for a free consultation</p>
+                </div>
+                
+                <div class="contact__container">
+                    <div class="contact__info">
+                        <h3 class="contact__title">Get In Touch</h3>
+                        <p class="contact__description">
+                            Ready to transform your home? Contact our expert team for a free consultation 
+                            and detailed quote. We're here to help bring your vision to life.
+                        </p>
+                        
+                        <div class="contact__details">
+                            <div class="contact__item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <h4>Phone</h4>
+                                    <a href="tel:+15551234567">(555) 123-4567</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact__item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h4>Email</h4>
+                                    <a href="mailto:info@eliteroofing.com">info@eliteroofing.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact__item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>Address</h4>
+                                    <p>123 Main Street<br>Springfield, IL 62701</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact__item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <h4>Business Hours</h4>
+                                    <p>Mon-Fri: 7:00 AM - 6:00 PM<br>Sat: 8:00 AM - 4:00 PM<br>Sun: Emergency Only</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="service__areas">
+                            <h4>Service Areas</h4>
+                            <p>Springfield, Oak Park, Naperville, Aurora, Joliet, Rockford, Peoria, and surrounding areas</p>
+                        </div>
+                    </div>
+                    
+                    <form class="contact__form" id="contact-form">
+                        <h3 class="form__title">Request Free Quote</h3>
+                        
+                        <div class="form__group">
+                            <input type="text" id="name" name="name" class="form__input" placeholder="Your Name" required>
+                            <span class="form__error" id="name-error"></span>
+                        </div>
+                        
+                        <div class="form__group">
+                            <input type="email" id="email" name="email" class="form__input" placeholder="Your Email" required>
+                            <span class="form__error" id="email-error"></span>
+                        </div>
+                        
+                        <div class="form__group">
+                            <input type="tel" id="phone" name="phone" class="form__input" placeholder="Your Phone Number" required>
+                            <span class="form__error" id="phone-error"></span>
+                        </div>
+                        
+                        <div class="form__group">
+                            <select id="service" name="service" class="form__input" required>
+                                <option value="">Select Service Type</option>
+                                <option value="roof-installation">Roof Installation</option>
+                                <option value="roof-repair">Roof Repair</option>
+                                <option value="home-remodeling">Home Remodeling</option>
+                                <option value="roof-inspection">Roof Inspection</option>
+                                <option value="emergency-service">Emergency Service</option>
+                                <option value="gutter-service">Gutter Services</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <span class="form__error" id="service-error"></span>
+                        </div>
+                        
+                        <div class="form__group">
+                            <textarea id="message" name="message" class="form__input form__textarea" placeholder="Project Details" rows="5" required></textarea>
+                            <span class="form__error" id="message-error"></span>
+                        </div>
+                        
+                        <button type="submit" class="btn btn--primary form__btn">
+                            <span class="btn__text">Send Message</span>
+                            <span class="btn__loading" style="display: none;">Sending...</span>
+                        </button>
+                        
+                        <div class="form__success" id="form-success" style="display: none;">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Thank you! Your message has been sent successfully. We'll contact you within 24 hours.</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__container">
+                <div class="footer__content">
+                    <div class="footer__section">
+                        <div class="footer__logo">
+                            <h3>Elite Roofing & Remodeling</h3>
+                            <p>Your trusted partner for quality roofing and remodeling services since 2003.</p>
+                        </div>
+                        
+                        <div class="footer__social">
+                            <a href="#" class="social__link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social__link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social__link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social__link"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer__section">
+                        <h4 class="footer__title">Services</h4>
+                        <ul class="footer__links">
+                            <li><a href="#services">Roof Installation</a></li>
+                            <li><a href="#services">Roof Repair</a></li>
+                            <li><a href="#services">Home Remodeling</a></li>
+                            <li><a href="#services">Roof Inspection</a></li>
+                            <li><a href="#services">Emergency Services</a></li>
+                            <li><a href="#services">Gutter Services</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__section">
+                        <h4 class="footer__title">Company</h4>
+                        <ul class="footer__links">
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#testimonials">Testimonials</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Insurance Claims</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__section">
+                        <h4 class="footer__title">Contact Info</h4>
+                        <div class="footer__contact">
+                            <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                            <p><i class="fas fa-envelope"></i> info@eliteroofing.com</p>
+                            <p><i class="fas fa-map-marker-alt"></i> 123 Main Street, Springfield, IL 62701</p>
+                        </div>
+                        
+                        <div class="footer__hours">
+                            <h5>Business Hours</h5>
+                            <p>Mon-Fri: 7:00 AM - 6:00 PM</p>
+                            <p>Sat: 8:00 AM - 4:00 PM</p>
+                            <p>Sun: Emergency Only</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <div class="footer__copyright">
+                    <p>&copy; 2024 Elite Roofing & Remodeling. All rights reserved.</p>
+                </div>
+                <div class="footer__legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox__content">
+            <span class="lightbox__close" onclick="closeLightbox()">&times;</span>
+            <img class="lightbox__image" id="lightbox-img" src="" alt="">
+        </div>
+    </div>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    
+
+<script>
+// Initialize floating ball functionality
+function initFloatingBall() {
+  const ball = document.getElementById('minimax-floating-ball');
+  if (!ball) return;
+
+  // Initial animation
+  ball.style.opacity = '0';
+  ball.style.transform = 'translateY(20px)';
+
+  setTimeout(() => {
+    ball.style.opacity = '1';
+    ball.style.transform = 'translateY(0)';
+  }, 500);
+
+  // Handle logo click
+  const ballContent = ball.querySelector('.minimax-ball-content');
+  ballContent.addEventListener('click', function (e) {
+    e.stopPropagation();
+    window.open('https://agent.minimax.io/agent', '_blank');
+    ball.style.transform = 'scale(0.95)';
+    setTimeout(() => {
+      ball.style.transform = 'scale(1)';
+    }, 100);
+  });
+
+  // Handle close button click
+  const closeIcon = ball.querySelector('.minimax-close-icon');
+  closeIcon.addEventListener('click', function (e) {
+    e.stopPropagation();
+    ball.style.opacity = '0';
+    ball.style.transform = 'translateY(20px)';
+
+    setTimeout(() => {
+      ball.style.display = 'none';
+    }, 300);
+  });
+}
+
+// Initialize when DOM is ready
+document.addEventListener('DOMContentLoaded', initFloatingBall); 
+
+// Website JavaScript for Elite Roofing & Remodeling
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize all components
+    initNavigation();
+    initScrollEffects();
+    initPortfolio();
+    initContactForm();
+    initLightbox();
+    initAnimations();
+});
+
+// ============================================
+// NAVIGATION FUNCTIONALITY
+// ============================================
+
+function initNavigation() {
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    const navClose = document.getElementById('nav-close');
+    const navLinks = document.querySelectorAll('.nav__link');
+
+    // Mobile menu toggle
+    if (navToggle) {
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.add('show-menu');
+        });
+    }
+
+    if (navClose) {
+        navClose.addEventListener('click', () => {
+            navMenu.classList.remove('show-menu');
+        });
+    }
+
+    // Close menu when clicking on nav links
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('show-menu');
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+            navMenu.classList.remove('show-menu');
+        }
+    });
+
+    // Smooth scrolling for navigation links
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            
+            if (targetSection) {
+                const headerHeight = document.querySelector('.header').offsetHeight;
+                const targetPosition = targetSection.offsetTop - headerHeight;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Active link highlighting
+    window.addEventListener('scroll', highlightActiveSection);
+}
+
+function highlightActiveSection() {
+    const sections = document.querySelectorAll('.section');
+    const navLinks = document.querySelectorAll('.nav__link');
+    const headerHeight = document.querySelector('.header').offsetHeight;
+    
+    let current = '';
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - headerHeight - 100;
+        const sectionHeight = section.offsetHeight;
+        
+        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+            current = section.getAttribute('id');
+        }
+    });
+    
+    navLinks.forEach(link => {
+        link.classList.remove('active-link');
+        if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active-link');
+        }
+    });
+}
+
+// ============================================
+// SCROLL EFFECTS
+// ============================================
+
+function initScrollEffects() {
+    const header = document.querySelector('.header');
+    
+    window.addEventListener('scroll', () => {
+        // Header background on scroll
+        if (window.scrollY > 100) {
+            header.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+            header.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+        } else {
+            header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+            header.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.12)';
+        }
+    });
+}
+
+// ============================================
+// PORTFOLIO FUNCTIONALITY
+// ============================================
+
+function initPortfolio() {
+    const filterButtons = document.querySelectorAll('.filter__btn');
+    const portfolioItems = document.querySelectorAll('.portfolio__item');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            button.classList.add('active');
+
+            const filterValue = button.getAttribute('data-filter');
+            
+            portfolioItems.forEach(item => {
+                const itemCategory = item.getAttribute('data-category');
+                
+                if (filterValue === 'all' || itemCategory === filterValue) {
+                    item.style.display = 'block';
+                    item.style.animation = 'fadeInUp 0.6s ease-out';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+}
+
+// ============================================
+// LIGHTBOX FUNCTIONALITY
+// ============================================
+
+function initLightbox() {
+    // This function will be called by the HTML onclick events
+    window.openLightbox = function(imageSrc) {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        
+        lightboxImg.src = imageSrc;
+        lightbox.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    };
+
+    window.closeLightbox = function() {
+        const lightbox = document.getElementById('lightbox');
+        lightbox.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    };
+
+    // Close lightbox when clicking outside the image
+    const lightbox = document.getElementById('lightbox');
+    if (lightbox) {
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+    }
+
+    // Close lightbox with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeLightbox();
+        }
+    });
+}
+
+// ============================================
+// CONTACT FORM FUNCTIONALITY
+// ============================================
+
+function initContactForm() {
+    const form = document.getElementById('contact-form');
+    const inputs = form.querySelectorAll('.form__input');
+
+    // Real-time validation
+    inputs.forEach(input => {
+        input.addEventListener('blur', () => validateField(input));
+        input.addEventListener('input', () => clearError(input));
+    });
+
+    // Form submission
+    form.addEventListener('submit', handleFormSubmit);
+}
+
+function validateField(field) {
+    const value = field.value.trim();
+    const fieldName = field.name;
+    let isValid = true;
+    let errorMessage = '';
+
+    // Clear previous error
+    clearError(field);
+
+    // Validation rules
+    switch (fieldName) {
+        case 'name':
+            if (value.length < 2) {
+                errorMessage = 'Name must be at least 2 characters long';
+                isValid = false;
+            }
+            break;
+
+        case 'email':
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(value)) {
+                errorMessage = 'Please enter a valid email address';
+                isValid = false;
+            }
+            break;
+
+        case 'phone':
+            const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
+            const cleanPhone = value.replace(/[\s\-\(\)]/g, '');
+            if (!phoneRegex.test(cleanPhone) || cleanPhone.length < 10) {
+                errorMessage = 'Please enter a valid phone number';
+                isValid = false;
+            }
+            break;
+
+        case 'service':
+            if (value === '') {
+                errorMessage = 'Please select a service type';
+                isValid = false;
+            }
+            break;
+
+        case 'message':
+            if (value.length < 10) {
+                errorMessage = 'Message must be at least 10 characters long';
+                isValid = false;
+            }
+            break;
+    }
+
+    if (!isValid) {
+        showError(field, errorMessage);
+        field.classList.add('error');
+    } else {
+        field.classList.remove('error');
+        field.classList.add('success');
+    }
+
+    return isValid;
+}
+
+function showError(field, message) {
+    const errorElement = document.getElementById(`${field.name}-error`);
+    if (errorElement) {
+        errorElement.textContent = message;
+    }
+}
+
+function clearError(field) {
+    const errorElement = document.getElementById(`${field.name}-error`);
+    if (errorElement) {
+        errorElement.textContent = '';
+    }
+    field.classList.remove('error', 'success');
+}
+
+function handleFormSubmit(e) {
+    e.preventDefault();
+    
+    const form = e.target;
+    const inputs = form.querySelectorAll('.form__input');
+    const submitBtn = form.querySelector('.form__btn');
+    const btnText = submitBtn.querySelector('.btn__text');
+    const btnLoading = submitBtn.querySelector('.btn__loading');
+    const successMessage = document.getElementById('form-success');
+
+    let isFormValid = true;
+
+    // Validate all fields
+    inputs.forEach(input => {
+        if (!validateField(input)) {
+            isFormValid = false;
+        }
+    });
+
+    if (!isFormValid) {
+        // Scroll to first error
+        const firstError = form.querySelector('.form__input.error');
+        if (firstError) {
+            firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            firstError.focus();
+        }
+        return;
+    }
+
+    // Show loading state
+    submitBtn.classList.add('loading');
+    btnText.style.display = 'none';
+    btnLoading.style.display = 'inline';
+    submitBtn.disabled = true;
+
+    // Simulate form submission (replace with actual submission logic)
+    setTimeout(() => {
+        // Hide loading state
+        submitBtn.classList.remove('loading');
+        btnText.style.display = 'inline';
+        btnLoading.style.display = 'none';
+        submitBtn.disabled = false;
+
+        // Show success message
+        successMessage.style.display = 'block';
+        
+        // Reset form
+        form.reset();
+        inputs.forEach(input => {
+            input.classList.remove('error', 'success');
+            clearError(input);
+        });
+
+        // Scroll to success message
+        successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+        // Hide success message after 5 seconds
+        setTimeout(() => {
+            successMessage.style.display = 'none';
+        }, 5000);
+
+    }, 2000); // Simulate 2 second processing time
+}
+
+// ============================================
+// ANIMATIONS AND SCROLL EFFECTS
+// ============================================
+
+function initAnimations() {
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in-up');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Observe elements for animation
+    const animatedElements = document.querySelectorAll(
+        '.service__card, .testimonial__card, .portfolio__item, .stat, .hero__feature'
+    );
+    
+    animatedElements.forEach(el => {
+        observer.observe(el);
+    });
+
+    // Counter animation for stats
+    animateCounters();
+}
+
+function animateCounters() {
+    const counters = document.querySelectorAll('.stat__number');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const target = parseInt(counter.textContent.replace(/\D/g, ''));
+                const suffix = counter.textContent.replace(/\d/g, '');
+                
+                animateCounter(counter, target, suffix);
+                observer.unobserve(counter);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    counters.forEach(counter => observer.observe(counter));
+}
+
+function animateCounter(element, target, suffix) {
+    let current = 0;
+    const increment = target / 60; // 60 frames for smooth animation
+    
+    const updateCounter = () => {
+        if (current < target) {
+            current += increment;
+            element.textContent = Math.ceil(current) + suffix;
+            requestAnimationFrame(updateCounter);
+        } else {
+            element.textContent = target + suffix;
+        }
+    };
+    
+    updateCounter();
+}
+
+// ============================================
+// UTILITY FUNCTIONS
+// ============================================
+
+// Phone number formatting
+function formatPhoneNumber(value) {
+    const number = value.replace(/\D/g, '');
+    const match = number.match(/^(\d{3})(\d{3})(\d{4})$/);
+    
+    if (match) {
+        return '(' + match[1] + ') ' + match[2] + '-' + match[3];
+    }
+    
+    return value;
+}
+
+// Debounce function for performance
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// Add phone number formatting to phone input
+document.addEventListener('DOMContentLoaded', function() {
+    const phoneInput = document.getElementById('phone');
+    if (phoneInput) {
+        phoneInput.addEventListener('input', function(e) {
+            const value = e.target.value;
+            const formattedValue = formatPhoneNumber(value);
+            if (formattedValue !== value) {
+                e.target.value = formattedValue;
+            }
+        });
+    }
+});
+
+// ============================================
+// PERFORMANCE OPTIMIZATIONS
+// ============================================
+
+// Optimize scroll events with throttling
+const optimizedScrollHandler = debounce(() => {
+    highlightActiveSection();
+}, 16); // ~60fps
+
+window.addEventListener('scroll', optimizedScrollHandler);
+
+// Lazy loading for images (if needed)
+function initLazyLoading() {
+    const images = document.querySelectorAll('img[data-src]');
+    
+    const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.removeAttribute('data-src');
+                imageObserver.unobserve(img);
+            }
+        });
+    });
+
+    images.forEach(img => imageObserver.observe(img));
+}
+
+// ============================================
+// ERROR HANDLING
+// ============================================
+
+// Global error handling
+window.addEventListener('error', function(e) {
+    console.error('JavaScript Error:', e.error);
+    // You could send this to a logging service in production
+});
+
+// Handle unhandled promise rejections
+window.addEventListener('unhandledrejection', function(e) {
+    console.error('Unhandled Promise Rejection:', e.reason);
+    e.preventDefault();
+});
+
+// ============================================
+// ACCESSIBILITY ENHANCEMENTS
+// ============================================
+
+// Keyboard navigation support
+document.addEventListener('keydown', function(e) {
+    // Escape key handling
+    if (e.key === 'Escape') {
+        // Close mobile menu
+        const navMenu = document.getElementById('nav-menu');
+        if (navMenu && navMenu.classList.contains('show-menu')) {
+            navMenu.classList.remove('show-menu');
+        }
+        
+        // Close lightbox
+        if (document.getElementById('lightbox').style.display === 'block') {
+            closeLightbox();
+        }
+    }
+    
+    // Enter key on buttons
+    if (e.key === 'Enter' && e.target.classList.contains('portfolio__btn')) {
+        e.target.click();
+    }
+});
+
+// Focus management for mobile menu
+function manageFocus() {
+    const navMenu = document.getElementById('nav-menu');
+    const navToggle = document.getElementById('nav-toggle');
+    
+    if (navMenu && navToggle) {
+        navToggle.addEventListener('click', () => {
+            setTimeout(() => {
+                const firstLink = navMenu.querySelector('.nav__link');
+                if (firstLink) firstLink.focus();
+            }, 100);
+        });
+    }
+}
+
+// Initialize focus management
+document.addEventListener('DOMContentLoaded', manageFocus);
+
+// ============================================
+// CONTACT FORM ENHANCEMENTS
+// ============================================
+
+// Auto-save form data to localStorage
+function initFormAutoSave() {
+    const form = document.getElementById('contact-form');
+    const inputs = form.querySelectorAll('input, select, textarea');
+    
+    // Load saved data
+    inputs.forEach(input => {
+        const savedValue = localStorage.getItem(`form_${input.name}`);
+        if (savedValue && input.type !== 'submit') {
+            input.value = savedValue;
+        }
+    });
+    
+    // Save data on input
+    inputs.forEach(input => {
+        input.addEventListener('input', debounce(() => {
+            localStorage.setItem(`form_${input.name}`, input.value);
+        }, 500));
+    });
+    
+    // Clear saved data on successful submission
+    form.addEventListener('submit', () => {
+        setTimeout(() => {
+            inputs.forEach(input => {
+                localStorage.removeItem(`form_${input.name}`);
+            });
+        }, 3000);
+    });
+}
+
+// Initialize auto-save
+document.addEventListener('DOMContentLoaded', initFormAutoSave);
+
+// ============================================
+// PROGRESSIVE ENHANCEMENT
+// ============================================
+
+// Check for JavaScript support and enhance accordingly
+document.documentElement.classList.remove('no-js');
+document.documentElement.classList.add('js');
+
+// Feature detection
+const features = {
+    intersectionObserver: 'IntersectionObserver' in window,
+    localStorage: typeof Storage !== 'undefined',
+    requestAnimationFrame: 'requestAnimationFrame' in window
+};
+
+// Apply enhanced features based on support
+if (features.intersectionObserver) {
+    initAnimations();
+} else {
+    // Fallback for older browsers
+    document.querySelectorAll('.service__card, .testimonial__card').forEach(el => {
+        el.classList.add('fade-in-up');
+    });
+}
+
+console.log('Elite Roofing & Remodeling website loaded successfully!');
+
+</script>
+
+</body>
+</html>
